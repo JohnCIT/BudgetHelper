@@ -9,39 +9,120 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="gigabottle.budgethelper.savingsHelper">
 
-    <TextView
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/SavingsPAge_HEADING"
-        android:id="@+id/titleHelp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/scrollView" >
 
-    <CheckedTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/SavingsPage_AMOUNT_TEXT"
-        android:id="@+id/saveAmountText"
-        android:autoText="false"
-        android:layout_alignTop="@+id/saveAmountText"
-        android:layout_alignLeft="@+id/titleHelp"
-        android:layout_alignStart="@+id/titleHelp"
-        android:checked="false" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/saveAmountText"
-        android:text="0.00"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/titleHelp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/savingsPAge_HEADING"
+                    android:id="@+id/titleHelp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_span="2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/savingsPage_AMOUNT_TEXT"
+                    android:layout_weight="1"
+                    android:id="@+id/saveAmountText" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/saveAmountValue"
+                    android:text="0.00"
+                    android:layout_below="@+id/titleHelp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_column="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/savingsPage_STARTING_AMOUNT"
+                    android:id="@+id/startingAmountText"
+                    android:layout_column="0"
+                    android:layout_below="@+id/saveAmountValue"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/startingAmountValue"
+                    android:layout_alignTop="@+id/startingAmountText"
+                    android:layout_toRightOf="@+id/startingAmountText"
+                    android:layout_toEndOf="@+id/startingAmountText"
+                    android:text="0.00"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Save by date"
+                    android:id="@+id/saveyByValue"
+                    android:layout_below="@+id/startingAmountValue"
+                    android:layout_alignLeft="@+id/saveyByValue"
+                    android:layout_alignStart="@+id/saveyByValue" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <DatePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveyByValue"
+                    android:layout_below="@+id/startingAmountValue"
+                    android:layout_alignLeft="@+id/startingAmountText"
+                    android:layout_alignStart="@+id/startingAmountText"
+                    android:layout_marginTop="52dp" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
 
 </RelativeLayout>
