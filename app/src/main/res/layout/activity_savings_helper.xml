@@ -122,6 +122,17 @@
                     android:layout_marginTop="52dp" />
             </TableRow>
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/SavingsPage_APPLY_BUTTON"
+                    android:id="@+id/applyButton" />
+            </TableRow>
+
         </TableLayout>
     </ScrollView>
 

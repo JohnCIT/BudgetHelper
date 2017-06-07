@@ -3,4 +3,5 @@
     <string name="savingsPage_AMOUNT_TEXT">Savings Target:</string>
     <string name="savingsPAge_HEADING">Welcome to the savings helper - TODO</string>
     <string name="savingsPage_STARTING_AMOUNT">Starting amount:</string>
+    <string name="SavingsPage_APPLY_BUTTON">Apply values</string>
 </resources>
