@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="gigabottle.budgethelper.savingsHelper">
+    tools:context=".savingsHelperActivity">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -102,10 +102,10 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Save by date"
-                    android:id="@+id/saveyByValue"
+                    android:id="@+id/saveByDateTitle"
                     android:layout_below="@+id/startingAmountValue"
-                    android:layout_alignLeft="@+id/saveyByValue"
-                    android:layout_alignStart="@+id/saveyByValue" />
+                    android:layout_alignLeft="@+id/saveByDate"
+                    android:layout_alignStart="@+id/saveByDate" />
             </TableRow>
 
             <TableRow
@@ -115,7 +115,7 @@
                 <DatePicker
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/saveyByValue"
+                    android:id="@+id/saveByDate"
                     android:layout_below="@+id/startingAmountValue"
                     android:layout_alignLeft="@+id/startingAmountText"
                     android:layout_alignStart="@+id/startingAmountText"

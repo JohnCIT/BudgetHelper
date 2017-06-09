@@ -1,7 +1,10 @@
-package model;
+package model.saviings;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Date;
+
+import model.TimePeriodAmountEnum;
 
 /**
  * Created by John on 09/06/2017.
@@ -11,11 +14,13 @@ import java.util.Date;
 public class SavingsHelperObject
 {
     private TimePeriodAmountEnum    _timePeriodAmount;
-    private BigInteger              _savingsTarget;
-    private BigInteger              _startingAmount;
+    private BigDecimal              _savingsTarget;
+    private BigDecimal              _startingAmount;
     private Date                    _targetDate;
 
-    public void SavingsHelperObject(BigInteger savingsTarget, BigInteger startingAmount, Date targetDate, TimePeriodAmountEnum timePeriodAmountEnum)
+
+
+    public SavingsHelperObject(BigDecimal savingsTarget, BigDecimal startingAmount, Date targetDate, TimePeriodAmountEnum timePeriodAmountEnum)
     {
         _savingsTarget      = savingsTarget;
         _startingAmount     = startingAmount;
@@ -26,6 +31,7 @@ public class SavingsHelperObject
     /**
      * Setr the length of time between savings amount, may not be needed in the end depending on how we do this
      * @param timePeriodAmount
+     *      the period of time between being able to add to savings.
      */
     public void setTimePeriodAmount(TimePeriodAmountEnum timePeriodAmount)
     {
@@ -38,7 +44,7 @@ public class SavingsHelperObject
      * @param savingsTarget
      *      The amount the user wishes to save
      */
-    public void setSavingsTarget(BigInteger savingsTarget)
+    public void setSavingsTarget(BigDecimal savingsTarget)
     {
         _savingsTarget = savingsTarget;
     }
@@ -49,7 +55,7 @@ public class SavingsHelperObject
      * @param startingAmount
      *      The starting amount of cash the user has
      */
-    public void setStartingAmount(BigInteger startingAmount)
+    public void setStartingAmount(BigDecimal startingAmount)
     {
         _startingAmount = startingAmount;
     }
@@ -81,7 +87,7 @@ public class SavingsHelperObject
      * @return
      *      A big int value representing the savings target
      */
-    public BigInteger getSavingsTarget()
+    public BigDecimal getSavingsTarget()
     {
         return _savingsTarget;
     }
@@ -92,7 +98,7 @@ public class SavingsHelperObject
      * @return
      *      A big int representing the the starting amount of cash the user has
      */
-    public BigInteger getStartingAmount() {
+    public BigDecimal getStartingAmount() {
         return _startingAmount;
     }
 
