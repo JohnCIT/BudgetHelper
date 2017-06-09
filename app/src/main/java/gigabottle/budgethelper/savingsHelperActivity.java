@@ -10,14 +10,14 @@ import android.widget.Toast;
 
 import java.math.BigDecimal;
 
-import controller.savings.SavingsObjectController;
+import controller.savings.SavingsHelperObjectController;
 import model.saviings.SavingsHelperObject;
 import model.TimePeriodAmountEnum;
 import ui.helpers.UIHelper;
 
 public class savingsHelperActivity extends AppCompatActivity {
 
-    SavingsObjectController _savingsController;
+    SavingsHelperObjectController _savingsController;
     EditText    _savingsTarget;
     Button      _applyButton;
     EditText    _startingAmount;
@@ -30,7 +30,7 @@ public class savingsHelperActivity extends AppCompatActivity {
         setContentView(R.layout.activity_savings_helper);
 
         // create the controller
-        _savingsController = new SavingsObjectController();
+        _savingsController = new SavingsHelperObjectController();
 
         // Have UI references
         _savingsTarget    = (EditText) findViewById(R.id.saveAmountValue);
