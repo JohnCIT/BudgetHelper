@@ -15,44 +15,95 @@ public class SavingsHelperObject
     private BigInteger              _startingAmount;
     private Date                    _targetDate;
 
-    public void SavingsHelperObject(BigInteger savingsTarget, BigInteger startingAmount, Date targetDate, TimePeriodAmountEnum timePeriodAmountEnum) {
+    public void SavingsHelperObject(BigInteger savingsTarget, BigInteger startingAmount, Date targetDate, TimePeriodAmountEnum timePeriodAmountEnum)
+    {
         _savingsTarget      = savingsTarget;
         _startingAmount     = startingAmount;
         _targetDate         = targetDate;
         _timePeriodAmount   = timePeriodAmountEnum;
     }
 
-    public void setTimePeriodAmount(TimePeriodAmountEnum _timePeriodAmount) {
-        this._timePeriodAmount = _timePeriodAmount;
+    /**
+     * Setr the length of time between savings amount, may not be needed in the end depending on how we do this
+     * @param timePeriodAmount
+     */
+    public void setTimePeriodAmount(TimePeriodAmountEnum timePeriodAmount)
+    {
+        _timePeriodAmount = timePeriodAmount;
     }
 
-    public void setSavingsTarget(BigInteger _savingsTarget) {
-        this._savingsTarget = _savingsTarget;
+    /**
+     * Set the savings target
+     *
+     * @param savingsTarget
+     *      The amount the user wishes to save
+     */
+    public void setSavingsTarget(BigInteger savingsTarget)
+    {
+        _savingsTarget = savingsTarget;
     }
 
-    public void setStartingAmount(BigInteger _startingAmount) {
-        this._startingAmount = _startingAmount;
+    /**
+     * Does the user have any cash starting out?
+     *
+     * @param startingAmount
+     *      The starting amount of cash the user has
+     */
+    public void setStartingAmount(BigInteger startingAmount)
+    {
+        _startingAmount = startingAmount;
     }
 
-    public void setTargetDate(Date _targetDate) {
-        this._targetDate = _targetDate;
+    /**
+     * The target date the user wants their savings by
+     * @param targetDate
+     *      The date corresponding to the desired date
+     */
+    public void setTargetDate(Date targetDate)
+    {
+        _targetDate = targetDate;
     }
 
+    /**
+     * Get the amount of time between what the user can save
+     *
+     * @return
+     * Big int value representing
+     */
     public TimePeriodAmountEnum getTimePeriodAmount()
     {
         return _timePeriodAmount;
     }
 
+    /**
+     * Get the savings target amount
+     *
+     * @return
+     *      A big int value representing the savings target
+     */
     public BigInteger getSavingsTarget()
     {
         return _savingsTarget;
     }
 
+    /**
+     * Get the starting amount the user has before starting to save
+     *
+     * @return
+     *      A big int representing the the starting amount of cash the user has
+     */
     public BigInteger getStartingAmount() {
         return _startingAmount;
     }
 
-    public Date getTargetDate() {
+    /**
+     * Get the target date the user wants there money to bae save by
+     *
+     * @return
+     *      A date object representing the target date the user wants their money by
+     */
+    public Date getTargetDate()
+    {
         return _targetDate;
     }
 }
